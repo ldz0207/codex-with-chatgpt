@@ -4,8 +4,9 @@
 > ChatGPT 负责思考，Codex 负责干活。
 
 > [!IMPORTANT]
-> **遇到问题？** 请先向 Codex 发送 **「更新 Codex with ChatGPT」** 并重试。更新到最新版本可以解决大多数已知问题。  
-> **Having trouble?** First ask Codex to **“Update Codex with ChatGPT”** and try again. Updating to the latest version resolves most known issues.
+> **修复或迁移已有安装？** 先按[来源与锁定恢复](docs/source-and-recovery.md)核对 origin、提交和锁文件，再单独审阅更新。下方一段话安装保留全新上游安装流程。
+>
+> **Repairing or migrating an existing install?** Follow [source and locked recovery](docs/source-and-recovery.md) before reviewing an update. The quick-install workflow below is for a new upstream installation.
 
 ## The problem · 解决什么问题
 
@@ -31,6 +32,12 @@ a secure, OAuth-protected, **read-only** MCP connection to your current
 workspace.
 
 Detailed docs below are in English · 详细中文文档见 **[README.zh-CN.md](README.zh-CN.md)**
+
+## Source and recovery · 来源与恢复
+
+This is the **ldz0207 fork**. The one-paste instructions below describe a **new upstream installation** from XiaoDuoYa; they do not restore this fork or an existing pinned checkout. For repair/migration, first follow [source and locked recovery](docs/source-and-recovery.md): keep the recorded origin, commit and lockfile, and review an update separately.
+
+本仓是 **ldz0207 个人 fork**。下方一段话安装针对**全新上游安装**；恢复本 fork 或已锁定环境时，先按[来源与锁定恢复](docs/source-and-recovery.md)选择来源，不能直接用 `git pull`、自动更新或换 origin 代替原环境复现。
 
 ## One-paste install · 一段话安装
 
