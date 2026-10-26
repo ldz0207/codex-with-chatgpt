@@ -13,9 +13,11 @@ The existing checkout's origin is `https://github.com/XiaoDuoYa/codex-with-chatg
 
 ## Lockfile boundary
 
-Both recorded commits have the same `pnpm-lock.yaml` SHA-256:
+Both recorded commits contain the same `pnpm-lock.yaml` Git blob (`88336be7db815addbbd67c86bda9713cc57d284d`). Its repository bytes use LF, with SHA-256:
 
-`70df031d08ddc23feada47a7c8c820b12fb921874f2285f6a00367309d4fa5fb`
+`6ee9a7f0261dc2b53329f38ebe259832a61ff5472ea15d48cb486f40e2ec6a6b`
+
+The recorded Windows checkout used CRLF and therefore had SHA-256 `70df031d08ddc23feada47a7c8c820b12fb921874f2285f6a00367309d4fa5fb`. Compare the same byte representation; a checkout's line-ending conversion changes its byte hash without changing the pinned lockfile content.
 
 Their recorded package metadata declares Node.js `>=20` and `pnpm@11.24.0`; the lock format is 9.0. The SDK's manifest specifier is `latest`, while this lock resolves `@modelcontextprotocol/sdk` to 1.30.0. An unlocked install or a later `git pull` can select different code/dependencies. Equal lock hashes do not prove equal source behavior or successful installation on another device.
 
